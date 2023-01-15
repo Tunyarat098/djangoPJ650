@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <marquee direction ="left" scrollamount="15" width="100%">
+        <table border="0px" align="center" style="background-color: hotpink">
+            <tr>
+                <td><img src="{% static 'images/me4.JPG'%}" width="200px"height="220px"> </td>
+                <td><img src="{% static 'images/me2.JPG'%}" width="200px"height="220px"> </td>
+                <td><img src="{% static 'images/me3.JPG'%}" width="200px"height="220px"> </td>
+                <td><img src="{% static 'images/me5.JPG'%}" width="200px"height="220px"> </td>
+                <td><img src="{% static 'images/me6.JPG'%}" width="200px"height="220px"> </td>
+                <td><img src="{% static 'images/me7.JPG'%}" width="200px"height="220px"> </td>
+                <td><img src="{% static 'images/me8.JPG'%}" width="200px"height="220px"> </td>
+                <td><img src="{% static 'images/me9.jpg'%}" width="200px"height="220px"> </td>
+                <td><img src="{% static 'images/me20.JPG'%}" width="200px"height="220px"> </td>
+                <td><img src="{% static 'images/me21.JPG'%}" width="200px"height="220px"> </td>
+                <td><img src="{% static 'images/me22.JPG'%}" width="200px"height="220px"> </td>
+                <td><img src="{% static 'images/me23.JPG'%}" width="200px"height="220px"> </td>
+            </tr>
+        </table>
+    </marquee>
+    <div class="row">
+            <h3 class="text-center display-10" style="background-color:lightskyblue"><b><u>Personal Information</u></b></h3>
+            <br><br>
+    </div>
+        <table class="table table-info">
+            <tr>
+                <td width="20%">Name  : </td>
+                <td width="80%">Tanyarat Sriyowong (butter)</td>
+            </tr>
+            <tr>
+                <td>date of birth  : </td>
+                <td>may, 12 2001</td>
+            </tr>
+            <tr>
+                <td>favorite thing to do  :</td>
+                <td>watching anything on Netflix</td>
+            </tr>
+            <tr>
+            <td>Instagram  : </td>
+                <td>jaobutter</td>
+            </tr>
+            <tr>
+             <td>Facebook  : </td>
+             <td>butter tanyarat</td>
+            </tr>
+            <tr>
+            <td>My personality  : </td>
+            <td>cuteness overloaded ;-p</td>
+            </tr>
+        </table>
+<br><br><br>
+{% endblock %}

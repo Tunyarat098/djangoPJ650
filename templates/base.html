@@ -1,0 +1,75 @@
+{%load static %}
+<html>
+    <head>
+        <title>Tanyarat</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'stylesheet/bt523/css/bootstrap.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/fontawesome515/css/all.css' %}">
+        <script src="{% static 'stylesheet/bt523/js/bootstrap.js' %}"></script>
+    </head>
+
+    <body>
+    <div class="container-fluid">
+        {% block sidebar %}
+            <br><br>
+            <nav class="navbar-nav nav-justified navbar-expand-lg fixed-top " style="background-color: palegoldenrod">
+                    <div class="col-lg-3">
+                        <h3>
+                            <a href="{% url 'home' %}" class="navbar-brand ">
+                                <img src="{% static 'images/newlogo.png' %}" alt="logo" style="width:75px;">
+
+                            </a>
+                            BUTTER
+                        </h3>
+                    </div>
+                    <div class="col-lg-9 align-self-lg-right">
+                        <h4 style="color: white;background-color: plum">
+                        lemme introduce myself to y'all!! i appreciate that<3 hope u guys enjoy ka ;P loveee chuuuu         </h4>
+                    </div>
+            </nav>
+        {% endblock %}
+        <div class="row">
+            <div class="col-lg-3" style="background-color: peachpuff ;color: white" style="width: min-content">
+              <br>  {% include 'menu.html' %}<br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+            <div class="col-lg-9">
+            <br><br><br>
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+    </body>
+</html>{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#{% load static %}#}
+{#<head>#}
+{#    <link type="text/css" rel="stylesheet"#}
+{#          href={% static 'stylesheet/bt523/css/bootstrap.css' %}>#}
+{#    <link type="text/css" rel="stylesheet" href="{% static 'fontawesome/fontawesome515/css/all.css' %}">#}
+{#    <script src='{% static 'stylesheet/bt523/js/bootstrap.js'%}'> </script>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{##}
+{#<div class=container-fluid">#}
+{#    <div class="row">#}
+{#        <div class="col-lg-12" style="background-color: palevioletred">#}
+{#            {% include 'header.html' %}#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#    <div class="row">#}
+{#        <div class="col-lg-12 text-warning "style="background-color: hotpink">#}
+{#            {% include 'menu.html' %}#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#    <div class="col-lg-12 text-primary" style="background-color: plum">#}
+{#        {% block content %}#}
+{#        {%  endblock %}#}
+{#    </div>#}
+{##}
+{#</div>#}
+{#</body>#}
+{#</html>#}
