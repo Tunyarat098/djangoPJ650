@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div>
+        <table class="table table-danger table-striped">
+        <tbody>
+            <tr>
+                <td>ชื่อ : {{ fname }}</td>
+                <td>นามสกุล : {{ lname }}</td>
+            </tr>
+            <tr>
+                <td>ชื่อเล่น : {{ nick }}</td>
+                <td>เพศ : {{ gen  }} </td>
+            </tr>
+            <tr>
+                <td>อายุ : {{ old }}</td>
+                <td>วันเกิด : </td>
+            </tr>
+            <tr>
+                <td>ที่อยู่ : {{ home }} </td>
+                <td>สถานะ : {{ sta }} </td>
+            </tr>
+            <tr>
+                <td>งานอดิเรก : {{ hob }} </td>
+                <td>วิชาที่ชอบ : {{ fav }} </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <table class="table table-danger table-striped">
+        <thead class="">
+        <tr>
+            <th scope="col">ชื่อสินค้า</th>
+            <th scope="col">ราคาสินค้า</th>
+            <th scope="col">รูปภาพ</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for listproduct in product %}
+            <tr>
+                <td>{{ listproduct.0 }}</td>
+                <td>{{ listproduct.1 }}</td>
+                <td><img src="{% static listproduct.2 %}"class="max-width: 100%; height: auto;" style="width: 200px" ></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
