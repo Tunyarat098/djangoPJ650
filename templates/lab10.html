@@ -1,38 +1,39 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-    <div>
-        <table class="table table-danger table-striped">
+    <div class="pt-3 ">
+    <h1 class="text-center">ข้อมูลส่วนตัว กับ ข้อมูลสินค้า</h1>
+        <table class="table table-light table-striped">
         <tbody>
             <tr>
-                <td>ชื่อ : {{ fname }}</td>
-                <td>นามสกุล : {{ lname }}</td>
+                <td><b>name : </b>{{ fname }}</td>
+                <td><b>surname : </b>{{ lname }}</td>
             </tr>
             <tr>
-                <td>ชื่อเล่น : {{ nick }}</td>
-                <td>เพศ : {{ gen  }} </td>
+                <td><b>nickname : </b>{{ nick }}</td>
+                <td><b>gender : </b>{{ gen  }} </td>
             </tr>
             <tr>
-                <td>อายุ : {{ old }}</td>
-                <td>วันเกิด : </td>
+                <td><b>age : </b>{{ old }}</td>
+                <td><b>birthdate : </b>{{ birth }}</td>
             </tr>
             <tr>
-                <td>ที่อยู่ : {{ home }} </td>
-                <td>สถานะ : {{ sta }} </td>
+                <td><b>address : </b>{{ home }} </td>
+                <td><b>status : </b>{{ sta }} </td>
             </tr>
             <tr>
-                <td>งานอดิเรก : {{ hob }} </td>
-                <td>วิชาที่ชอบ : {{ fav }} </td>
+                <td><b>hobby : </b>{{ hob }} </td>
+                <td><b>fav subject : </b>{{ fav }} </td>
             </tr>
         </tbody>
     </table>
     </div>
-    <table class="table table-danger table-striped">
-        <thead class="">
+    <table class="table table-danger table-striped text-table">
+        <thead>
         <tr>
-            <th scope="col">ชื่อสินค้า</th>
-            <th scope="col">ราคาสินค้า</th>
-            <th scope="col">รูปภาพ</th>
+            <th scope="col">product</th>
+            <th scope="col">price</th>
+            <th scope="col">photo</th>
         </tr>
         </thead>
         <tbody>

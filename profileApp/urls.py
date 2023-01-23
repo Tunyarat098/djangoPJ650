@@ -10,4 +10,7 @@ urlpatterns = [
     path('test', views.test, name="test"),
     path('showMydataGroup', views.showMydataGroup, name='showMydataGroup'),
     path('showMyData', views.showMyData, name="showMyData"),
+    path('showOurProduct',views.showOurProduct, name = "showOurProduct"),
+    path('newProduct',views.newProduct, name = 'newProduct'),
+    path('frmProduct',views.frmProduct, name='frmProduct'),
 ]

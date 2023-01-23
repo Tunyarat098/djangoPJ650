@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load fontawesome_5 %}
+{% block content %}
+    <h1 class ="text-warning text-center bg-black">our product for sale</h1>
+    <table class = "table table-primary table-striped table-hover">
+
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>brand</th>
+        <th>price</th>
+        <th>net</th>
+    </tr>
+    {% for product in products %}
+        <tr>
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.brand }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.net }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+
+    <div class="row">
+        <div class="col col-6 text-lg-start">
+            <a href="{%  url 'newProduct'%}" class="btn btn-success">
+                <i class ="fa fa-plus"></i> new product
+            </a>
+
+            <a href="{% url 'frmProduct'%}" class="btn-success">
+                <i class ="fa fa-plus"></i> new product
+            </a>
+
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}

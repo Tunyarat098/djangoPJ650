@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load fontawesome_5 %}
+{% block content %}
+
+    <h1 class ="text-danger text-center bg-white"> new product</h1>
+    <table class="table table-info">
+    <form  method="post" class="form form-control">
+        {% csrf_token %}
+        <tr>
+            <td>id</td>
+            <td>
+
+                <input type=text" name="id" size="15" maxlength="13" required>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>name</td>
+            <td>
+
+                <input type=text" name="name" size="55" maxlength="50" required>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>brand</td>
+            <td>
+
+                <input type=text" name="brand" size="35" maxlength="30" required>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>price</td>
+            <td>
+
+                <input type=number name="name" size="10"min="1" max="100000" required>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>net</td>
+            <td>
+
+                <input type=number name="net" size="10"min="0" max="100000" required>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="text-center">
+                <input type ="submit" value="save" class="btn btn-success">
+                <input type ="reset" value="reset" class="btn btn-danger">
+            </td>
+        </tr>
+    </form>
+    </table>
+{% endblock %}
