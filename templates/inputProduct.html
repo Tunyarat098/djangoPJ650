@@ -1,0 +1,24 @@
+{%  extends 'base.html' %}
+{% block content %}
+    {% load static %}
+    {% load humanize %}
+     <div class="rounded m-3 bg-white" style="height: 100%; font-family: 'Prompt', sans-serif; font-size:16px;">
+    <div class="d-flex pt-3 bd-highlight">
+            <div class="p-2 bg-primary flex-fill text-white" style="font-family:'Yellowtail', cursive;">
+             <h2> InputProduct</h2>
+            </div>
+        </div>
+         <div class="rounded m-3 bg-white" style="font-weight: bold;">
+    <form method = "POST">
+        {% csrf_token %}
+        <div class ="form-group">
+            {{ form.as_p }}
+        </div>
+
+    <p class="text-center pt-3">
+        <input type ="submit" value="Save" class="btn btn-success">
+    </p>
+    </form>
+         </div>
+     </div>
+{% endblock %}

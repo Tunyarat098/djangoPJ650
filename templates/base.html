@@ -1,45 +1,58 @@
-{%load static %}
+{% load static %}
 <html>
-    <head>
-        <title>Tanyarat</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'stylesheet/bt523/css/bootstrap.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/fontawesome515/css/all.css' %}">
-        <link rel="stylesheet" href="{% static 'style.css' %}">
-        <script src="{% static 'stylesheet/bt523/js/bootstrap.js' %}"></script>
-    </head>
+<head>
+    <title>Tanyarat</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheet/bt523/css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/fontawesome515/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="{% static 'stylesheet/bt523/js/bootstrap.js' %}"></script>
+</head>
 
-    <body>
-    <div class="container-fluid">
-        {% block sidebar %}
-            <br><br>
-            <nav class="navbar-nav nav-justified navbar-expand-lg fixed-top " style="background-color: palegoldenrod">
-                    <div class="col-lg-3">
-                        <h3>
-                            <a href="{% url 'home' %}" class="navbar-brand ">
-                                <img src="{% static 'images/newlogo.png' %}" alt="logo" style="width:75px;">
+<body>
+<div class="container-fluid">
+    {% block sidebar %}
+        <br><br>
+        <nav class="navbar-nav nav-justified navbar-expand-lg fixed-top " style="background-color: palegoldenrod">
+            <div class="col-lg-3">
+                <h3>
+                    <a href="{% url 'home' %}" class="navbar-brand ">
+                        <img src="{% static 'images/newlogo.png' %}" alt="logo" style="width:75px;">
 
-                            </a>
-                            BUTTER
-                        </h3>
-                    </div>
-                    <div class="col-lg-9 align-self-lg-right">
-                        <h4 style="color: white;background-color: plum">
-                        lemme introduce myself to y'all!! i appreciate that<3 hope u guys enjoy ka ;P loveee chuuuu         </h4>
-                    </div>
-            </nav>
-        {% endblock %}
-        <div class="row">
-            <div class="col-lg-3" style="background-color: peachpuff ;color: white" style="width: min-content">
-              <br>  {% include 'menu.html' %}<br><br><br><br><br><br><br><br><br><br><br>
+                    </a>
+                    BUTTER
+                </h3>
             </div>
-            <div class="col-lg-9">
+            <div class="col-lg-9 align-self-lg-right">
+                <h4 style="color: white;background-color: plum">
+                    lemme introduce myself to y'all!! i appreciate that<3 hope u guys enjoy ka ;P loveee chuuuu </h4>
+            </div>
+        </nav>
+    {% endblock %}
+    <div class="row">
+        <div class="col-lg-3" style="background-color: peachpuff ;color: white" style="width: min-content">
+            <br> {% include 'menu.html' %}<br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        <div class="col-lg-9">
             <br><br><br>
+            {% for message in messages %}
+                <div class="container p-0 mt-3">
+                    <div class="alert {{ message.tags }} alert-dismissible">
+                        <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="alert"
+                                aria-label="Close"
+                        ></button>
+                        <strong class="text">{{ message }}</strong>
+                    </div>
+                </div>
+            {% endfor %}
             {% block content %}
             {% endblock %}
-            </div>
         </div>
     </div>
-    </body>
+</div>
+</body>
 </html>{#<!DOCTYPE html>#}
 {#<html lang="en">#}
 {#{% load static %}#}

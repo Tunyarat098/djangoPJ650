@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1 class="text-center text-danger bg-white"> confirm to delete! </h1>
+     <table class="table table-info ">
+         <tr>
+             <td>ID</td>
+             <td>{{ product.pid }}</td>
+         </tr>
+
+        <tr>
+             <td>name</td>
+             <td>{{ product.name }}</td>
+         </tr>
+
+        <tr>
+             <td>Brand</td>
+             <td>{{ product.brand }}</td>
+         </tr>
+        <tr>
+             <td>Price</td>
+             <td>{{ product.price }}</td>
+         </tr>
+
+        <tr>
+             <td>Cat</td>
+             <td>{{ product.category }}</td>
+        </tr>
+     </table>
+
+    <div>
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="pid" value="{{ product.pid }}">
+        <input type="submit" value="Confirm" class="btn btn-danger">
+        <input type="button" value="Back" class="btn btn-secondary" onclick="history.back()">
+    </form>
+    </div>
+
+    </a>
+
+
+{% endblock %}
