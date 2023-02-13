@@ -302,3 +302,7 @@ def genNewEmpID():  # ฟังก์ชันส าหรับสร้ า�
         return "Emp" + currentYear + "-" + newID
     else:
         return "Emp" + currentYear + "-" + "00001"
+
+
+def groupproduct(request):
+    return render(request, 'groupproduct.html')

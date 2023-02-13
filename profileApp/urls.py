@@ -26,4 +26,6 @@ urlpatterns = [
     path('deleteProduct/<pid>',views.deleteProduct, name='deleteProduct'),
 
     path('empCreate', views.empCreate, name='empCreate'),
+
+    path('groupproduct', views.groupproduct, name='groupproduct'),
 ]
